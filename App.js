@@ -1,14 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View} from 'react-native';
+import Accounts from './datafiles/usersaccount';
+import Users from './datafiles/users';
+import Students from './datafiles/students';
 
-export default function App() {
+const App= () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    
+          <Accounts/>
+
+          <Users/>
+          
+          <Students/>   
+  
     </View>
   );
 }
+export default App;
 
 const styles = StyleSheet.create({
   container: {
@@ -17,4 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  scroll: {
+    flexGrow: 1,
+  }
 });
